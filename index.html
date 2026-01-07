@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">☀️ Weather Now</div>
+            <div class="units-container">
+                <button class="units-btn" id="unit-toggle">
+                    <span>⚙️ Units: °C</span>
+                    <i class="arrow">▾</i>
+                </button>
+            </div>
+        </nav>
+
+        <header class="header">
+            <h1>How's the sky looking today?</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Search for a place...">
+                <button id="search-btn" class="searchbtn">Search</button>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="left-section">
+                <div class="main-card">
+                    <div class="location-info">
+                        <h2 id="cityname">Ahmedabad, India</h2>
+                        <p id="date">Friday, Nov 28, 2025</p>
+                    </div>
+                    <div class="temp-info">
+                        <span id="maintemp">20°</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><span>Feels like</span>
+                        <p id="feels-like">18°</p>
+                    </div>
+                    <div class="stat-card"><span>Humidity</span>
+                        <p id="humidity">46%</p>
+                    </div>
+                    <div class="stat-card"><span>Wind</span>
+                        <p id="wind-speed">14 km/h</p>
+                    </div>
+                    <div class="stat-card"><span>Precipitation</span>
+                        <p id="precip">0 mm</p>
+                    </div>
+                </div>
+
+                <div class="daily-forecast">
+                    <h3>Daily forecast</h3>
+                    <div class="days-row" id="daily-row"></div>
+                </div>
+            </div>
+
+            <aside class="right-section">
+                <div class="hourly-card">
+                    <div class="hourly-header">
+                        <h3>Hourly forecast</h3>
+                        <select id="dayselect">
+                            <option>Today</option>
+                        </select>
+                    </div>
+                    <div id="hourly-list" class="hourly-list"></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
